@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = require('../../../ssr-module-cache.js');
+/******/ 	var installedModules = require('../../../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2167,29 +2167,28 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
-/*! exports provided: default, getStaticProps */
+/***/ "./pages/posts/[id].js":
+/*!*****************************!*\
+  !*** ./pages/posts/[id].js ***!
+  \*****************************/
+/*! exports provided: default, getStaticPaths, getStaticProps */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Post; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticPaths", function() { return getStaticPaths; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_date__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/date */ "./components/date.js");
+/* harmony import */ var _components_date__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/date */ "./components/date.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/utils.module.css */ "./styles/utils.module.css");
-/* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _lib_posts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/posts */ "./lib/posts.js");
-var _jsxFileName = "/Users/tiagomoreira/www/nextjs-blog/pages/index.js";
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/layout */ "./components/layout.js");
+/* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../styles/utils.module.css */ "./styles/utils.module.css");
+/* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _lib_posts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../lib/posts */ "./lib/posts.js");
+var _jsxFileName = "/Users/tiagomoreira/www/nextjs-blog/pages/posts/[id].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2197,138 +2196,87 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-function Home({
-  allPostsData
+function Post({
+  postData
 }) {
   return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    home: true,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 5
+      lineNumber: 9,
+      columnNumber: 9
     }
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 7
+      lineNumber: 10,
+      columnNumber: 13
     }
   }, __jsx("title", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 9
+      lineNumber: 11,
+      columnNumber: 17
     }
-  }, _components_layout__WEBPACK_IMPORTED_MODULE_3__["siteTitle"])), __jsx("section", {
-    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.headingMd,
+  }, postData.title)), __jsx("article", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 13
+    }
+  }, __jsx("h1", {
+    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_4___default.a.headingXl,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15,
-      columnNumber: 7
+      columnNumber: 17
     }
-  }, __jsx("p", {
+  }, postData.title), __jsx("div", {
+    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_4___default.a.lightText,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16,
-      columnNumber: 9
-    }
-  }, "[Your Self Introduction]"), __jsx("p", {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 9
-    }
-  }, "(This is a sample website - you\u2019ll be building a site like this on", ' ', __jsx("a", {
-    href: "https://nextjs.org/learn",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 11
-    }
-  }, "our Next.js tutorial"), ".)")), __jsx("section", {
-    className: `${_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.headingMd} ${_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.padding1px}`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 7
-    }
-  }, __jsx("h2", {
-    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.headingLg,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 9
-    }
-  }, "Blog"), __jsx("ul", {
-    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.list,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 9
-    }
-  }, allPostsData.map(({
-    id,
-    date,
-    title
-  }) => __jsx("li", {
-    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.listItem,
-    key: id,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
-    }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    href: "/posts/[id]",
-    as: `/posts/${id}`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30,
-      columnNumber: 15
-    }
-  }, title), __jsx("br", {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 15
-    }
-  }), __jsx("small", {
-    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.lightText,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 15
-    }
-  }, __jsx(_components_date__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    dateString: date,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35,
       columnNumber: 17
     }
-  })))))));
+  }, __jsx(_components_date__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    dateString: postData.date,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 21
+    }
+  })), __jsx("div", {
+    dangerouslySetInnerHTML: {
+      __html: postData.contentHtml
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 17
+    }
+  })));
 }
-async function getStaticProps() {
-  const allPostsData = Object(_lib_posts__WEBPACK_IMPORTED_MODULE_6__["getSortedPostsData"])();
+async function getStaticPaths() {
+  const paths = Object(_lib_posts__WEBPACK_IMPORTED_MODULE_5__["getAllPostIds"])();
+  return {
+    paths,
+    fallback: false
+  };
+}
+async function getStaticProps({
+  params
+}) {
+  const postData = await Object(_lib_posts__WEBPACK_IMPORTED_MODULE_5__["getPostData"])(params.id);
   return {
     props: {
-      allPostsData
+      postData
     }
   };
 }
@@ -2358,14 +2306,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4:
-/*!******************************!*\
-  !*** multi ./pages/index.js ***!
-  \******************************/
+/***/ 5:
+/*!***********************************!*\
+  !*** multi ./pages/posts/[id].js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/tiagomoreira/www/nextjs-blog/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/tiagomoreira/www/nextjs-blog/pages/posts/[id].js */"./pages/posts/[id].js");
 
 
 /***/ }),
@@ -2503,4 +2451,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=[id].js.map
